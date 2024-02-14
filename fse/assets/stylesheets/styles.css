@@ -17,21 +17,21 @@
   --font-secondary:
   'Poppins', sans-serif;
   scroll-behavior: smooth;
-  --color-bg: #025add;
+  --color-bg: #333334;
   --hero-overlay-color: transparent;
   --menu-color: #ffffff;
-  --theme-color: #025add;
+  --theme-color: #333334;
   --border-color: #e2e2e2;
   --theme-color-dark: #f8f8f8;
   --text-color: #3a3a3a;
   --hero-text-color: #ffffff;
   --text-white-color: #ffffff;
   --text-grey-color: #3a3a3a;
-  --text-theme-color: #025add;
+  --text-theme-color: #333334;
   --light-color: #ffffff;
   --color-default: #3a3a3a;
-  --color-primary: #025add;
-  --color-secondary: #0c6de0;
+  --color-primary: #333334;
+  --color-secondary: #be1622;
   --color-start: #3a3a3a;
   --color-end: #3a3a3a;
   --hero-card-bg: rgb(228 227 223 / 17%);
@@ -44,13 +44,13 @@
   --hero-overlay-color: #000000;
   --menu-color: #ffffff;
   --theme-color: #000000;
-  --border-color: #14929a;
+  --border-color: #be1622;
   --theme-color-dark: #2c2c2c;
   --text-color: #ffffff;
   --hero-text-color: #ffffff;
   --text-white-color: #ffffff;
   --text-grey-color: #565656;
-  --text-theme-color: #14929a;
+  --text-theme-color: #be1622;
   --light-color: #000000;
   --color-default: #000000;
   --color-primary: #000000;
@@ -445,16 +445,16 @@ img:hover {
   top: 0;
   right: 0;
   left: 0;
-  height: 90px;
+  height: 120px;
 }
 
 .header .logo img {
-  max-height: 40px;
+  max-height: 100px;
   margin-right: 6px;
 }
 
 .header.stikcy-menu {
-  background: var(--light-color);
+  background: var(--color-primary);
 }
 .header.stikcy-menu .logo h1{
   color: var(--color-primary);
@@ -518,7 +518,7 @@ section {background: var(--light-color);}
   }
 
   .stikcy-menu .navbar a{
-    color: var(--text-color);
+    color: var(--menu-color);
   }
 
   .navbar a i,
