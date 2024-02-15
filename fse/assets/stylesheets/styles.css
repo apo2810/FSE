@@ -158,7 +158,45 @@ h6 {
 .hide-on-mobile{
   display: block;
 }
+.image-list-section {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: justify;
+}
 
+.image-list-section .left {
+  flex: 1;
+  color: white;
+  padding: 20px;
+}
+.image-list-section .left li {
+color: #be1622;
+}
+
+.image-list-section .right {
+  flex: 1;
+  text-align: center;
+}
+
+.image-list-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animation */
+.image-list-section .left ul {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.image-list-section.scrolled .left ul {
+  opacity: 1;
+  transform: translateY(0);
+}
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
@@ -166,7 +204,9 @@ section {
   padding: 60px 0;
   overflow: hidden;
 }
-
+.lg{
+  margin-top: (5px);
+}
 .section{
   padding: 60px 0;
   overflow: hidden;
@@ -199,7 +239,7 @@ section {
 
 .section-header p {
   margin-bottom: 0;
-  color: #b8651d;
+  color: #be1622;
 }
 
 img {
