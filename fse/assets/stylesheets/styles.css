@@ -115,7 +115,10 @@ h6 {
   padding: 20px;
   text-align: justify;
 }
-
+.image-list-section-w {
+  background-color: white;
+  align-items: center;
+}
 .image-list-section .left {
   flex: 1;
   color: white;
@@ -130,7 +133,7 @@ color: white;
 
 .image-list-section .right {
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .image-list-section img {
@@ -149,6 +152,30 @@ color: white;
   opacity: 1;
   transform: translateY(0);
   margin-bottom: 20px;
+}
+.image-list-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.left,
+.right {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .image-list-section {
+    flex-direction: row;
+  }
+
+  .left {
+    width: 70%;
+    padding-right: 20px;
+  }
+
+  .right {
+    width: 30%;
+  }
 }
 /*--------------------------------------------------------------
 # Sections & Section Header
@@ -251,7 +278,7 @@ img:hover {
 }
 
 .breadcrumbs .page-header p {
-  color: var(--menu-color);
+  color: var(--color-primary);
 }
 
 .breadcrumbs nav {
