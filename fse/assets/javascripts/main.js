@@ -295,7 +295,18 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
-
+  window.addEventListener('scroll', () => {
+    const container = document.querySelector('.container-d');
+    const containerHeight = container.offsetHeight;
+    const containerTop = container.getBoundingClientRect().top;
+    const onScreen = window.innerHeight - containerTop;
+    
+    if(onScreen > 0 && onScreen < window.innerHeight + containerHeight) {
+      container.style.opacity = 1; // Fait apparaître le conteneur
+    } else {
+      container.style.opacity = 0; // Cache le conteneur en dehors de la vue
+    }
+  });
   /**
    * Preloader
    */

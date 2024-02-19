@@ -38,7 +38,9 @@
   --box-shadow-color: rgb(82 90 101 / 10%);
   --box-shadow-black: rgb(82 90 101 / 70%);
 }
-
+:target {
+  scroll-margin-top: 70px; /* Ajustez cette valeur en fonction de la hauteur de votre en-tête fixe */
+}
 
 body {
   font-family: var(--font-default);
@@ -46,9 +48,6 @@ body {
   background: var(--theme-color);
   transition: 0.5s background ease;
 }
-
-
-
 
 a {
   color: var(--color-primary);
@@ -162,7 +161,9 @@ color: white;
 .right {
   width: 100%;
 }
-
+.last{
+  border-bottom: white 20px solid;
+}
 @media only screen and (min-width: 768px) {
   .image-list-section {
     flex-direction: row;
@@ -3379,7 +3380,6 @@ canvas{
 
 
 .footer-section {
-
   background: var(--color-primary);
   background-size: cover;
   padding: 60px 0;
@@ -3584,4 +3584,29 @@ canvas{
 
 .footer-menu li a:hover {
   color: #000000;
+}
+
+
+/*--------------------------------------------------------------
+# Recrutement
+--------------------------------------------------------------*/
+.container-d {
+  display: flex;
+  justify-content: space-around;
+  opacity: 0; /* Cache initialement le conteneur */
+  transition: opacity 1s ease-in-out; /* Animation douce de l'apparition */
+}
+
+.image {
+  width: 100px; /* Ajustez selon vos besoins */
+  height: 100px; /* Ajustez selon vos besoins */
+  margin: 10px;
+}
+
+.image1 {
+  background-color: red; /* Remplacer par une image réelle */
+}
+
+.image2 {
+  background-color: blue; /* Remplacer par une image réelle */
 }
