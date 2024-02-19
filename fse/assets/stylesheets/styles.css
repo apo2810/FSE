@@ -1655,7 +1655,7 @@ section {background: var(--light-color);}
   }
 }
 .caption{
-
+  padding: 15px;
   background-color: var(--box-shadow-black);
 }
 @media (max-width: 767px) {
@@ -3352,7 +3352,8 @@ canvas{
 
 
 .footer-section {
-  background: url(video-fse.mp4) center left;
+
+  background: var(--color-primary);
   background-size: cover;
   padding: 60px 0;
   border-radius: 0px;
@@ -3368,13 +3369,12 @@ canvas{
   right: 0;
   width: 100%;
   height: 100%;
-  background: #000000;
   z-index: 0;
   opacity: 0.8;
 }
 
 .footer-cta {
-  border-bottom: 1px solid #373636;
+  border-bottom: 1px solid #c00113;
 }
 
 .copyright-text{
@@ -3401,7 +3401,7 @@ canvas{
 }
 
 .cta-text span {
-  color: #757575;
+  color: #c00113;
   font-size: 15px;
 }
 
@@ -3441,7 +3441,7 @@ canvas{
 }
 
 .footer-social-icon span {
-  color: var(--color-primary);
+  color: #c00113;
   display: block;
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
@@ -3463,19 +3463,19 @@ canvas{
 }
 
 .facebook-bg {
-  background: var(--color-primary);
+  background: #c00113;
 }
 
 .twitter-bg {
-  background: var(--color-primary);
+  background: #c00113;
 }
 
 .google-bg {
-  background: var(--color-primary);
+  background: #c00113;
 }
 
 .footer-widget-heading h3 {
-  color: var(--color-primary);
+  color: #c00113;
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -3490,7 +3490,7 @@ canvas{
 }
 
 .footer-widget ul li a:hover {
-  color: var(--color-primary);
+  color: #c00113;
 }
 
 .footer-widget ul li a {
@@ -3509,7 +3509,7 @@ canvas{
   padding: 14px 28px;
   background: #e4e4e4;
   border: 1px solid #e4e4e4;
-  color: #222222;
+  color: #c00113;
   outline: none;
 }
 
@@ -3522,7 +3522,7 @@ canvas{
 }
 
 .subscribe-form button i {
-  color: var(--color-primary);
+  color: #c00113;
   font-size: 3rem;
   transform: rotate(-6deg);
 }
@@ -3538,7 +3538,7 @@ canvas{
 }
 
 .copyright-text p a {
-  color: var(--color-primary);
+  color: #c00113;
 }
 
 .footer-menu li {
@@ -3547,7 +3547,7 @@ canvas{
 }
 
 .footer-menu li:hover a {
-  color: var(--color-primary);
+  color: white;
 }
 
 .footer-menu li a {
