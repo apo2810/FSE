@@ -1,12 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
-  /*  
-    Template name    : Technoit - IT Solutions & Business Services Multipurpose Responsive Website Template
-    Author           : ZRTHEMES
-    Version          : 1.0
-    File Description : Main JS file of the template
-  */
+  
 
   
 
@@ -15,21 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   new PureCounter();
 
-  const darkModeButton = document.getElementById('darkmode-button');
-
-  darkModeButton.addEventListener('click', toggleMode);
-
-  function toggleMode() {
-    let buttonText = darkModeButton.innerHTML;
-    var element = document.body;
-    if (buttonText === '<i class="bi bi-moon-fill"></i>') {
-      element.classList.add("dark");
-      darkModeButton.innerHTML = '<i class="bi bi-sun-fill"></i>';
-    } else {
-      element.classList.remove("dark");
-      darkModeButton.innerHTML = '<i class="bi bi-moon-fill"></i>';
-    }
-  }
+  
 
   /**
    * Sticky Header on Scroll
