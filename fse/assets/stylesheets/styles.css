@@ -605,7 +605,7 @@ section {background: var(--light-color);}
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: var(--color-primary);
+    color: var(--color-light);
   }
 
   .navbar .dropdown:hover>ul {
@@ -2351,6 +2351,7 @@ dl, ol, ul {
 
 .blog .comments .reply-form .form-group {
   margin-bottom: 25px;
+
 }
 
 .blog .comments .reply-form .btn-primary {
@@ -3241,6 +3242,8 @@ dl, ol, ul {
 
 .contact-section .contact-form .form-group {
   margin-bottom: 30px;
+  background-color: var(--color-primary);
+  border-radius: 20px;
 }
 
 .contact-section .contact-form form textarea.form-control {

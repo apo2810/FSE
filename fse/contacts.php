@@ -122,21 +122,68 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-8 col-md-12" data-aos="fade-left">
+            <div class="contact-form-box contact-form contact-form-3">
+              <div class="form-container-box">
+                <form class="contact-form form" id="ajax-contact" method="post" action="assets/phpscripts/contact.php">
+                  <div class="controls">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group form-input-box">
+                          <input type="text" class="form-control" id="name" name="name" placeholder="Name*"
+                            required="required" data-error="Name is required.">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group form-input-box">
+                          <input type="email" class="form-control" id="email" name="email" placeholder="Email*"
+                            required="required" data-error="Valid email is required.">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group form-input-box">
+                          <input type="text" class="form-control" name="subject" placeholder="Subject"
+                            required="required">
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-group form-input-box">
+                          <textarea class="form-control" id="message" name="message" rows="7"
+                            placeholder="Write Your Message*" required="required"
+                            data-error="Please, leave us a message."></textarea>
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <button type="submit" data-text="Send Message">Envoyer</button>
+                      </div>
+                      <div class="messages">
+                        <div class="alert alert alert-success alert-dismissable alert-dismissable hidden"
+                          id="msgSubmit"><button type="button" class="close" data-dismiss="alert"
+                            aria-hidden="true">&times;</button> Thank You! your message has been sent. </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
             <div class="col-lg-8 col-md-12">
               <div class="contact-form-box contact-form contact-form-3">
                 <div class="form-container-box">
                   <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post">
-                    <div class="form-group form-input-box">
-                      <input class="form-control" id="contact-name" type="text" name="name" required placeholder="Nom*" >
-                      <label class="form-label" for="contact-name"></label>
+                    <div class="form-wrap form-wrap_icon linear-icon-man">
+                      <input class="form-input" id="contact-name" type="text" name="name" required>
+                      <label class="form-label" for="contact-name">Nom</label>
                     </div>
-                    <div class="form-group form-input-box">
-                      <input class="form-control" id="contact-email" type="email" name="email" required placeholder="Email*">
-                      <label class="form-label" for="contact-email"></label>
+                    <div class="form-wrap form-wrap_icon linear-icon-man">
+                      <input class="form-input" id="contact-email" type="email" name="email" required>
+                      <label class="form-label" for="contact-email">E-mail</label>
                     </div>
-                    <div class="form-group form-input-box">
-                      <textarea class="form-control" id="contact-message" name="message" required placeholder="Message*"></textarea>
-                      <label class="form-label" for="contact-message"></label>
+                    <div class="form-wrap form-wrap_icon linear-icon-man">
+                      <textarea class="form-input" id="contact-message" name="message" required></textarea>
+                      <label class="form-label" for="contact-message">Message</label>
                     </div>
                     <button class="btn-get-started hide-on-mobile" type="submit">Envoyer</button>
                   </form>
@@ -222,6 +269,7 @@
         </div>
     </div>
   </footer>
+  
   <!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
@@ -245,7 +293,28 @@
 
   <!-- Template Main JS File -->
   <script src="assets/javascripts/main.js"></script>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- coded by Ragnar-->
+    <?php
+    if (isset($_POST['message'])) {
+        $entete  = 'MIME-Version: 1.0' . "\r\n";
+        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $entete .= 'From: FSE.com' . "\r\n";
+        $entete .= 'Reply-to: ' . $_POST['email'];
 
+        $message = '<h1>Message envoyé depuis la page Contact de FSE</h1>
+        <p><b>Email : </b>' . $_POST['email'] . '<br>
+        <p><b>nom : </b>' . $_POST['name'] . '<br>
+        <b>Message : </b>' . htmlspecialchars($_POST['message']) . '</p>';
 
-
-</body></html>
+        $retour = mail('contact@fsesecurite.fr', 'Envoi depuis page Contact', $message, $entete);
+        if($retour)
+            echo '<p>Votre message a bien été envoyé.</p>';
+    }
+    ?>
+  </body>
+</html>
