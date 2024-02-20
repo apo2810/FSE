@@ -47,6 +47,7 @@ body {
   color: var(--text-color);
   background: var(--theme-color);
   transition: 0.5s background ease;
+  overflow-x: hidden;
 }
 
 a {
@@ -3595,18 +3596,53 @@ canvas{
   justify-content: space-around;
   opacity: 0; /* Cache initialement le conteneur */
   transition: opacity 1s ease-in-out; /* Animation douce de l'apparition */
+  background-color: white;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+.text-box {
+  position: absolute; /* Positionne l'encadré de texte de manière absolue */
+  top: 50%; /* Centre l'encadré verticalement */
+  left: 50%; /* Centre l'encadré horizontalement */
+  transform: translate(-50%, -50%); /* Ajuste le centrage */
+  background-color: white;
+  padding: 20px;
+  z-index: 2; /* Assure que l'encadré est au-dessus des images */
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Optionnel: Ajoute une ombre pour le distinguer */
 }
 
 .image {
-  width: 100px; /* Ajustez selon vos besoins */
-  height: 100px; /* Ajustez selon vos besoins */
-  margin: 10px;
+  flex-grow: 1; /* Les divs .image prennent tout l'espace disponible */
+  height: 100vh;
+  margin: 20px 0px;
+  position: relative;
+  background: center;
 }
 
 .image1 {
-  background-color: red; /* Remplacer par une image réelle */
+  background: url(../images/recrutement.jpeg)center left; /* Remplacer par une image réelle */
+  background-size: cover;
+  padding: 150px 0px;
+  border-radius: 0px;
+  overflow: hidden;
+  position: relative;
+  transform: translateX(-100%);
+  transition: transform 1s ease-out;
 }
 
 .image2 {
-  background-color: blue; /* Remplacer par une image réelle */
+  background: url(../images/poigne.jpeg)center left; /* Remplacer par une image réelle */
+  background-size: cover;
+  padding: 150px 0px;
+  border-radius: 0px;
+  overflow: hidden;
+  position: relative;
+  transform: translateX(100%);
+  transition: transform 1s ease-out;
+}
+.image-animate {
+  transform: translateX(0%);
 }

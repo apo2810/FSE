@@ -307,6 +307,22 @@ document.addEventListener('DOMContentLoaded', () => {
       container.style.opacity = 0; // Cache le conteneur en dehors de la vue
     }
   });
+  window.addEventListener('scroll', function() {
+    const textBox = document.querySelector('.text-box');
+    const image1 = document.querySelector('.image1');
+    const image2 = document.querySelector('.image2');
+    
+    const textRect = textBox.getBoundingClientRect();
+    
+    // Vérifie si l'encadré de texte est visible
+    if(textRect.top < window.innerHeight && textRect.bottom > 0) {
+      image1.classList.add('image-animate');
+      image2.classList.add('image-animate');
+    } else {
+      image1.classList.remove('image-animate');
+      image2.classList.remove('image-animate');
+    }
+  });
   /**
    * Preloader
    */
