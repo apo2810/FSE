@@ -466,11 +466,11 @@ img:hover {
   right: 0;
   left: 0;
   height: 120px;
+  padding: 100px;
 }
 
 .header .logo img {
-  max-height: 100px;
-  margin-right: 6px;
+  max-height: 160px;
 }
 
 .header.stikcy-menu {
