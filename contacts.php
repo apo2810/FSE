@@ -34,7 +34,6 @@
 </head>
 
 <body>
-
 <header id="header" class="header d-flex align-items-center sticked stikcy-menu">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
@@ -55,6 +54,7 @@
             </ul>
           </li>
           <li><a href="recrutement.html" class="">Recrutement</a></li>
+          <li><a href="reference.html" class="">Références</a></li>
         </ul>
       </nav><!-- .navbar -->
       <a href="contact.html" class="btn-get-started hide-on-mobile">Nous contacter</a>
